@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Location</title>
+    <link rel="stylesheet" type="text/css" href="location.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+
+<body>
+    <nav id="menu">
+        <ul>
+            <div id="heading">
+                <a href="#">Location</a></li>
+            </div>
+            <li><a href="halaman1.html">Home</a></li>
+            <li><a href="attraction.html">Attractions</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="location.html">Location</a></li>
+        </ul>
+    </nav>
+
+    <div id="locationTitle">
+        <h3> LOCATION OF JATIM PARK 3 </h3>
+    </div>
+
+    <div id="address">
+        <h3>Peta Lokasi Kami
+            Jatim Park 3 (Dino Park)
+            
+            Jalan Raya Ir. Soekarno No.144, Beji Junrejo
+            
+            Kota Batu, Jawa Timur 65236, Indonesia.</h3>
+    </div>
+
+    <div id="map" style="width: 100%;height: 500px;"></div>
+    <script>
+        function initMap() {
+            var jatim3 = { lat: -7.897819983452437, lng: 112.554026 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 9,
+                center: jatim3
+            });
+            var content =  '<img src="img/logo.png"/>';
+            var infoWindow = new google.maps.InfoWindow({
+                content: content,
+                position: new google.maps.LatLng(-7.800000000000000, 112.554026),
+            });
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(-7.897819983452437, 112.554026),
+                map: map
+            })
+            infoWindow.open(map);
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?
+ key=AIzaSyAYy0yTX53Tx4WlZWApad4e6A69OJQp5YU&callback=initMap"></script>
+
+    <div class="footer">
+        Copyright by Nazela Hanum
+    </div> 
+</body>
+
+</html>
